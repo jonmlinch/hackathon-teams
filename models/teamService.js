@@ -18,7 +18,7 @@ function getTeam(teamName) {
 function deleteTeam(teamName) {
   var teams = allTeams();
   var index = -1;
-
+  console.log(teamName)
   for (var i = 0; i < teams.length; i++) {
     if (teams[i].name === teamName) {
       index = i;

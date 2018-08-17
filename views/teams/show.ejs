@@ -1,8 +1,15 @@
 <div>
 	<h2>
-	  <a href="/teams/<%= team.name %>"><%= team.name %></a>
+	  <%= team.name %>
 	</h2>
-	<p>
-	  <%= team.members %>
-	</p>
+
+	<ul>
+		<% team.members.split(',').forEach(function(member){ %>
+		<li><%= member %></li>
+		<% }) %>
+	</ul>
+
+	<a class="btn btn-warning" href="./edit/<%=team.name%>">Edit team</a>
+	<a class="btn btn-danger" href="./<%=team.name%>" id="delete-btn">Delete team</a>
+	
 </div>
